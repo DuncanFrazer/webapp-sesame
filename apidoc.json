@@ -1,0 +1,34 @@
+{
+  "name": "Sesame Web App REST API",
+  "version": "0.2.0",
+  "description": "REST API of Sesame - Garage Door Opener - project",
+  "title": "Sesame",
+  "url" : "",
+  "order" : [
+    "sesame",
+    "durations",
+    "alerts",
+    "GetAPI",
+    "GetDoors",
+    "GetDoorState",
+    "DoorOperate",
+    "DoorOpen",
+    "DoorClose",
+    "DoorOpenCounterReset",
+    "DoorCloseCounterReset",
+    "DoorState",
+    "DoorStats",
+    "ClearDoorStats",
+    "GetDoorLogs",
+
+    "DurationsAPI",
+    "GetOpenDuration",
+    "UpdateOpenDuration",
+    "GetCloseDuration",
+    "UpdateCloseDuration"
+  ],
+  "template" : {
+    "forceLanguage" : "en",
+    "withCompare" : false
+  }
+}

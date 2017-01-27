@@ -1,0 +1,15 @@
+# Dependency directory
+/node_modules
+
+#vs code specific
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+config.js
+/.idea
+npm-debug.log
+/doc
+
