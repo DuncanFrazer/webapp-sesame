@@ -141,11 +141,11 @@ exports.synchronizeDoorsState = function() {
     .then( (results) => {
         DBHelper.insertOrUpdateConfig(DBConsts.doorOpenedStateKey, results[0]);
         DBHelper.insertOrUpdateConfig(DBConsts.doorClosedStateKey, results[1]);
-    })    
+    })
     .catch((error) => {
         console.error("Door state synchronization failed. %s", error);
     });
-}
+};
 
 exports.getDoorOpenedOptoClickState = function (clientName, callback) {
     return this.getPropertyValue(clientName, 3200, 0, 'DigitalInputState', callback);

@@ -219,7 +219,6 @@ exports.doorLogs = function (req, res) {
 
     const pageSize = parseInt(req.query.pageSize, 10) || DEFAULT_PAGE_SIZE;
     const startIndex = parseInt(req.query.startIndex, 10) || 0;
-    
 
     let totalCount = 0;
 
@@ -236,13 +235,13 @@ exports.doorLogs = function (req, res) {
             return DBHelper.getActions(startIndex, pageSize);
         })
         .then((actions) => {
-                
+
                 let responseLinks = Utils.preparePrevNextLinks(fullUrl, startIndex, pageSize, totalCount);
                 if (actions === undefined) {
                     Utils.sendJsonResponse(res, 200, {"PageInfo": pageInfo, "links": responseLinks, "items": []});
                     return;
                 }
-                
+
                 pageInfo.ItemsCount = actions.length;
 
                 const statistics = [];
@@ -261,13 +260,3 @@ exports.doorLogs = function (req, res) {
             res.sendStatus(500);
         });
 };
-
-
-
-
-
-
-
-
-
-
