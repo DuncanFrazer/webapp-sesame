@@ -103,6 +103,31 @@ router.get('/doors', SesameController.doorEntryPoint);
 
 
 /**
+ * @api {put} /doors/lock Lock Door
+ * @apiName DoorLock
+ * @apiGroup sesame
+ * @apiDescription applies a software lock, no door move operations will be actioned when locked
+ * @apiUse AuthorizationHeader
+ * @apiSuccess 204 NoContent
+ * @apiError 401 Unauthorized
+ * @apiError 406 Device Server issue
+ */
+router.put('/doors/lock', DoorOperationController.doorLock);
+
+/**
+ * @api {put} /doors/unlock Unlock Door
+ * @apiName DoorUnlock
+ * @apiGroup sesame
+ * @apiDescription applies a software unlock, allow door move operations when unlocked
+ * @apiUse AuthorizationHeader
+ * @apiSuccess 204 NoContent
+ * @apiError 401 Unauthorized
+ * @apiError 406 Device Server issue
+ */
+router.put('/doors/unlock', DoorOperationController.doorUnlock);
+
+
+/**
  * @api {put} /doors/operate Door operate
  * @apiName DoorOperate
  * @apiGroup sesame
