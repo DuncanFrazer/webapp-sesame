@@ -13,7 +13,11 @@
  *
  * CLIENT_NAME is the name of your sesame client connected to Device Server
  *
- * HOST is utl to your webapp instance, change it accordingly depending on your setup.
+ * HOST is url to your webapp instance, change it accordingly depending on your setup.
+ *
+ * lock_webhook enables the software lock of door operations is set to true.
+ *
+ * ifttt module will cause applets to be called if set to true and your ifttt key pasted into this config file
  *
  */
 
@@ -24,10 +28,11 @@ module.exports = {
     client_name : 'SesameDevice',
     db_uri : 'mongodb://localhost/sesame',
     host : '<host_url>',
+    lock_webhook : false,
     modules: {
         ifttt: {
             enabled: false,
-            ifttt_key: '<iftt_key>'
+            ifttt_key: '<ifttt_key>'
         }
     }
 

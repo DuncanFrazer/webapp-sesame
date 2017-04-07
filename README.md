@@ -13,7 +13,7 @@
 * mLab
 
 ## Architecture
-![Architecture](../images/sesame1.jpg)
+![Architecture](images/sesame1.jpg)
 
 ## Jump Start
 
@@ -51,6 +51,8 @@ You can receive email and/or sms notifications about door issues. For that you n
 5. As a event use one of two provided by sesame web app:
     * **doorstuck** is used to notify you when door couldn't reach end position
     * **maintenance** is used to notify you when door needs maintenance
+    * **lock** is used when the webapp sucessfully applies the software door lock as a result of the webapp's lock webhook
+    * **unlock** is used when the webapp sucessfully deactivates the software door lock status
 6. As a action service choose anything you want. Eg you can use email service to get notifications via email or sms service to get them on your phone.
 7. Create as many applets you want.
 8. Go back to web app source code. Edit config.js file end enable ifttt module by setting flag **enabled** to true.
