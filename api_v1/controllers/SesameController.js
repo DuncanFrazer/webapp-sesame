@@ -13,7 +13,6 @@ const DBConsts = require('../models/DBConsts');
 
 const DEFAULT_PAGE_SIZE = 10;
 
-
 //------------------------------------------------------------------------------
 /**
  * API Entry Point
@@ -211,7 +210,6 @@ exports.doorStatsReset = function (req, res) {
             res.sendStatus(500);
         });
 };
-
 
 
 exports.doorLogs = function (req, res) {
