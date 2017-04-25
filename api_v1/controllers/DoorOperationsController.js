@@ -19,14 +19,14 @@ exports.doorLock = function (req, res) {
     console.info("Lock enabled");
     Ifttt.notifyLock();
     res.sendStatus(200);  
-}
+};
 
 exports.doorUnlock = function (req, res) {
     locked=false;
     console.info("Lock disabled");
     Ifttt.notifyUnlock();
     res.sendStatus(200);
-}
+};
 
 
 exports.doorOperate = function (req, res) {
