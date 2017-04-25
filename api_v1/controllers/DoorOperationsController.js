@@ -18,7 +18,7 @@ exports.doorLock = function (req, res) {
     locked=true;
     console.info("Lock enabled");
     Ifttt.notifyLock();
-    res.sendStatus(200);  
+    res.sendStatus(200);
 };
 
 exports.doorUnlock = function (req, res) {
@@ -69,7 +69,7 @@ exports.doorOpen = function (req, res) {
             console.log("Sesame is locked, ignoring Door Open command");
             res.sendStatus(406);
     }
-    else {    
+    else {
         clearTimeout(timeout);
 
         const fullUrl = req.protocol + '://' + req.get('host') + '/doors/open';
